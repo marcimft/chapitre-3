@@ -1,0 +1,1044 @@
+\documentclass{report}
+
+\usepackage{amsthm,amsmath,amssymb,mathrsfs,amsfonts,mathtools}
+\usepackage{hyperref}
+\usepackage{pgf, tikz}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{figures/}}
+\newcommand{\dd}{\mathrm{d}}
+%\modulolinenumbers[5]
+
+
+\begin{document}
+
+\section{Motivation}
+\subsection{loth 2009}
+The pulse wave velocity (PWV) in a compliant vessel increases as
+wall stiffness increases and has been of interest since arterial stiffness
+is thought to be a risk factor for arterial disease
+The pulse wave velocity (PWV) in a compliant vessel increases as
+wall stiffness increases and has been of interest since arterial stiffness
+is thought to be a risk factor for arterial disease [1]. Craniospinal dis
+orders,
+such as Chiari malformation, syringomyelia, and others, are
+thought to be linked with overall cerebrospinal fluid (CSF) system compliance, and hence, PWV measurements would also be of inter
+est \cite{william_1976} \cite{martin loth 2005}
+In vivo PWV has been quantified through invasive measurement
+of pressure in the CSF system \cite{williams_1976}. However, researchers have
+found it difficult to obtain CSF PWV noninvasively due to a lack of
+accessibility to the skull and spinal vertebrae..
+
+
+\section{Review}
+
+\subsection{loth 2011 very interesting, a kind of a review}
+
+As velocity wave
+speed is known to relate to the material properties of
+a flow conduit, it may provide an estimate of tissue
+stiffness in the craniospinal system when measured in
+the spinal subarachnoid space. As increased tissue
+stiffness is known to result from increased pressures,
+this technique may be useful in quantifying stiffness
+differences in the spinal subarachnoid space of
+healthy subjects
+
+Given the inconsistent results of magnetic resonance
+imaging-based studies, engineers have sought to
+better understand differences in the craniospinal
+system of patients with type I Chiari malformation
+by analyzing the hydrodynamics present in cerebrospinal
+fluid flow that are not directly measurable
+by imaging. The ultimate goal of these engineering
+studies has been to gain insight into the biomechanical
+nature of the disease. This may be accomplished
+through the use of computational and experimental
+tools, which seek to improve diagnostic methods and
+surgical planning.
+Computational fluid dynamics and in vitro flow
+models allow non-invasive analysis of the hydrodynamic
+environment in the craniospinal system.
+Computational fluid dynamics simulations have been
+helpful in describing the hemodynamics of blood flow
+in arteries and veins44,45 where the shear stresses
+created by blood flow have been shown to be
+important in the development of arterial diseases
+Both computational and in vitro modeling of
+cerebrospinal fluid flow typically begins with a model
+of the geometry of interest, either idealized or
+reconstructed from anatomic magnetic resonance
+images using solid modeling software, and flow data
+obtained from one-dimensional phase-contrast imaging
+measurements. Computational fluid dynamics
+models approximate hydrodynamic variables, such as
+pressure and fluid velocity, in the flow field by
+utilizing the Navier–Stokes equations to numerically
+simulate cerebrospinal fluid flow. The computational
+fluid models can be coupled with computational solid
+models to understand the solid stresses within the
+neural tissue as a result of the fluid structure
+interaction.39,40
+
+Computer-generated geometries can also be used
+to create anatomically realistic in vitro models.
+Measurement of velocity at discrete points within
+the in vitro models can be obtained by laser Doppler
+anemometry or particle image velocimetry, for
+optically clear models, or the models can be made
+magnetic resonance imaging-compatible and flow
+measured by imaging techniques. Pressure transducers
+can record pressure at discrete points, though not
+throughout the entire flow field. In vitro models have
+the advantage that no complex mathematical equations
+need to be solved to resolve features of the flow
+field, but modeling other system parameters can be
+difficult, such as matching the viscous, elastic, and
+porous properties of tissue.
+
+The arachnoid trabeculae, nerve roots, and
+perivascular vessels of the spinal cord are often
+neglected in simulations of cerebrospinal fluid
+motion due to the spatial resolution required to
+image the fine structures relative to the rest of the
+subarachnoid space and the computational complexity
+required to incorporate them into model geometries.
+Stockman47 conducted cerebrospinal fluid flow
+simulations using the lattice Boltzmann method in a
+rigid annular model that included fine anatomical
+structures of the spinal subarachnoid space such as
+trabeculae, nerve bundles, and denticulate ligaments
+(Fig. 5). The study found that longitudinally averaged
+flow was not significantly affected by the
+arachnoid trabeculae when the spacing of trabeculae
+was regular. Variation in trabeculae width had little
+effect on the velocity profile for a given pressure
+
+distribution, which implied that the pressure environment
+in the spinal subarachnoid space was not
+greatly affected by fine structures. However, the
+arachnoidal trabeculae were found to be important
+in the superior cranial subarachnoid space in a
+subject-specific simulation by Gupta et al.48 with the
+domain modeled as a porous medium. In this
+simulation, the trabecular microstructure of the
+superior cranial subarachnoid space was found to
+offer substantial resistance to cerebrospinal fluid
+flow. Doubling of the trabecular density from a
+nominal value corresponding to a subarachnoid
+space porosity of 0.99 increased the pressure drop
+across the cranial subarachnoid space by a factor of
+2.5. Large spatial variations were found in the
+velocity distribution in the cranial subarachnoid
+space, which the authors proposed may influence
+transport behavior of metabolites, neuroendocrine,
+and other substances in the cranial cerebrospinal
+fluid circulation.
+
+Roldan et al.54 simulated
+cerebrospinal fluid flow in rigid geometrically
+realistic spinal subarachnoid space models based
+on magnetic resonance images from the spinal canal
+of a patient and a healthy volunteer. The study
+employed the boundary element method, which
+neglects inertial effects, to solve the Navier–Stokes
+equations. Peak systole and peak diastole were
+modeled separately as steady flow. The pressure
+gradient between the inlet and outlet was found to
+be steeper in the patient model than in a healthy
+model of the same length. Peak pressures in the
+patient model were 1.5 times higher than the healthy
+model. Flow fields were heterogeneous with fluid
+jets observed anterolaterally to the spinal cord in
+both models. Qualitatively these results were consistent
+with findings from several phase-contrast
+imaging studies.10,25,37 Significant velocity vector
+components were observed perpendicular to the
+long axis of the spinal canal (Fig. 7). Linge et al.55
+produced similar results using a geometrically
+idealized model of the posterior cranial fossa and
+cervical spine. This study examined the effect of
+anatomic variation on cerebrospinal fluid hydrodynamics.
+Though the geometry was idealized,
+spatial variations in flow patterns resembled those
+observed in in vivo phase-contrast imaging studies.
+The simulated pressure pulse (0.75 mmHg peak-topeak
+amplitude) compared favorably with in vivo
+cerebrospinal fluid pulse pressure measurements in
+healthy subjects (1–4 mmHg56–58).
+
+At present, the hydrodynamic parameters of interest
+are geometry, velocity and volume flow, compliance
+and tissue mechanical properties, resistance, and
+pressure. The following discussion details each of
+these parameters in light of the current findings and
+challenges involved in their determination.
+
+Brain settling may cause increases in fluid
+velocity and resistance to flow, which in turn creates a
+larger pressure gradient that may further alter the
+compliance of the craniospinal system,14 and the
+cascade may continue.
+
+\subsection{loth 2014}
+CFD has been applied in models with varying degrees of ana-
+35 tomical complexity to help understand the underlying physiology
+36 of CSF flow [17–19]. A review of CSF flow studies using CFD
+37 was published by Shaffer et al. [20] and Yiallourou et al. [21].
+
+
+
+
+\section{Dissertation}
+Flow models coupled with MRI
+flow measurements may become a noninvasive tool to explain the abnormal dynamics of
+CSF in related brain disorders as well as to determine concentration and local distribu
+tion
+of drugs delivered into the CSF space.
+
+Numerical
+models can provide estimates of wave speed; however, the difficulty of
+determining tissue elasticity properties as well as accurate dimensions
+diminishes the reliability of these estimates.
+
+The methodology requires verification
+through phantom model studies and optimization of data processing.
+
+serve as a prognostic indicator in conjunction
+with geometric magnetic resonance measurements
+
+\subsection{Numerical methods}
+The computations were extended until the initial condition effects
+were eliminated or periodwise convergence was achieved in
+each cycle, and only computations of the last cycle are reported.
+One-dimensional grids with 101 grid
+nodes and a time step increment of 1 ms were used.
+The convergence
+criterion was 10-6 percent of the flow rate at each
+Newton–Raphson iteration.
+
+\section{theory}
+
+\subsection{wave transmission}
+
+One method to compute the PWV
+in the coaxial tube system involves the use of the Moen-Korteweg
+equation.
+
+
+
+\section{Anatomy}
+This fluid cushions the brain from impact on the cranial vault
+walls due to sudden motions. CSF also delivers nutrients and protein
+to/from brain surface along with the removal of waste products. CSF is produced within the ventricular cavities at an average rate of 0.3 to 0.7 ml/min and is withdrawn mainly into the superior
+sagittal sinus (Loth 2001)
+
+CSF volume in the cranio-spinal cavity is estimated
+to be 125 ml.(Loth 2001)
+
+Dilute amounts of monoamines and proteins
+are present in normal CSF, whereas the pathological cases may
+contain high concentrations of red blood cells ~hemorrhage!
+and white blood cells ~meningitis!.(Loth 2001)
+
+\subsection{Origin of CSF}
+Several mechanisms have been suggested
+for the origin of CSF pulsation \cite{bering_circulation_1962} \cite{du_boulay_pulsatile_1966}, the primary one being
+changes in intracranial blood volume during the cardiac cycle.
+Dunbar et al. \cite{dunbar_study_1966} found the lumbar CSF pressure pulsations to
+persist in dogs with the cervical canal blocked, indicating the
+presence of a secondary driving mechanism. (Loth 2001)
+
+Recent developments in noninvasive flow measurement techniques,
+such as color Doppler ultrasound and phase encoded MRI,
+enabled the in vivo measurements of the velocity pulsation. Using
+MRI, Feinberg and Mark \cite{feinberg_human_1987} and Enzmann and Pelc \cite{enzmann_cerebrospinal_1993} found
+correlation between brain motion and CSF flow waveforms. Winkler
+\cite{winkler_cerebrospinal_1994} showed the synchronous nature of the CSF pulsation
+with respiration in normal infants, with ultrasound and echography.
+
+CSF velocity waveforms in the ventricular, cisternal, and
+cervical subarachnoid spaces were described by Bhadelia et al. \cite{bhadelia_analysis_1995}
+and Henry-Feugas et al. \cite{henry-feugeas_temporal_1993}. Alperin et al. \cite{alperin_mri_2005}
+used phase contrast MRI of CSF and blood flow to characterize
+the CSF dynamics in terms of a hemodynamically independent
+CSF transfer function (very interesting). Significant work has been done to measure
+CSF and brain tissue motion within the spine and cranium using
+MRI.
+
+It has also been observed that the spinal cord moves a small but
+detectable amount during CSF pulsation. Motion sensitive MRI
+techniques have been used to quantify the motion of the cord as
+well. Researchers have found the spinal cord to move within the
+spinal canal at a peak velocity of approximately 0.7–1.2 cm/s
+
+\subsection{Data}
+CSF is produced within the ventricular cavities at an average rate of 0.3 to 0.7 ml/min (loth 2001)
+
+Researchers have found the spinal cord to move within the
+spinal canal at a peak velocity of approximately 0.7–1.2 cm/s (loth 2001)
+
+\section{Introduction}
+
+Several theory of CSF circulation : choroid plexus as a pump, arterial rise in cranial vault, veins compression and this original but somehow theory that when the spinal canal is occluded, CSF remains under pressure => it is like there are several plans and ways for the CSF to move in case of failure of one of them, the huma body is amazing. Talk about the history of the CSF. A l'heure ou l'esprit de transversalité et multidisciplinarité nourrit la recherche scientifique, il me paraît important de souligner les points de vue de disciplines telle que l'ostéopathie sur le LCR.
+
+Cerebrospinal fluid pressure dynamics are difficult
+to simulate due to the complexities detailed above.
+Even if the pressure boundary conditions for computational
+simulations are measured invasively, the
+simulated results are suspect due to the necessity to
+simplify and decouple different parts of the cerebrospinal
+fluid and communicating systems. For
+example, decoupling of the spinal and cranial
+cerebrospinal fluid systems has been common in the
+existing studies and could make anomalies in the
+approximated flow field (e.g. seemingly random pressure
+or velocity fluctuations) difficult to justify in the
+context of only one part of the system.51
+
+\section{Craniospinal disorders}
+
+\cite{oldefield}
+
+For example,
+large values of VWS may provide an indication of elevated intracranial
+pressure. Chiari I malformation may produce an altered pressure
+environment that is detectable by this methodology as well
+
+Type I Chiari malformation has historically been
+described as a change in the morphology of the
+hindbrain, characterized by herniation of the cerebellar
+tonsils past the foramen magnum by 3–5 mm,
+as diagnosed by magnetic resonance imaging
+
+The herniation results in reduced crosssectional
+area of the subarachnoid space at the
+foramen magnum
+
+The present understanding of
+the pathophysiological cascade in type I Chiari
+malformation follows the following logic:
+1. morphological changes to the cerebellum crowd the
+subarachnoid space near the foramen magnum;6–9
+2. crowding of the local subarachnoid space results in
+obstruction of cerebrospinal fluid flow pulsations
+at the foramen magnum;
+3. the obstruction of flow pulsations results in
+abnormal cerebrospinal fluid velocities10,11 and
+potentially increased resistance;
+4. increased resistance could reduce cerebrospinal
+fluid flow between the cranial and spinal subarachnoid
+spaces with each cardiac pulsation.
+However, the driving pressure (arterial pressure)
+is much larger than intracranial pressure and, thus,
+can force the same volume of cerebrospinal fluid
+out of the cranium even with an obstruction;
+5. an increased pressure gradient is required to push
+the same volume of cerebrospinal fluid from the
+cranial to the spinal subarachnoid space with the
+presence of an obstruction;
+6. the increased pressure gradient may consequently
+displace brain tissue, resulting in further alteration
+to the morphology of the cerebellum, and produce abnormal biomechanical forces acting on the
+neural tissue and vasculature.
+
+A craniospinal pathology often accompanying type I
+Chiari malformation that may also significantly
+impact the hydrodynamic environment of the craniospinal
+system is syringomyelia. Syringomyelia is
+characterized by a fluid filled cyst or cysts that form
+in the spinal cord parenchyma that can expand over
+time, eventually obstructing cerebrospinal fluid
+movement in the spinal subarachnoid space. The
+cyst(s), or syrinx(ges), can form caudal to a flow
+obstruction, such as the cerebellar tonsil herniation in
+type I Chiari malformation, and have direct connection
+to the fourth ventricle or be entirely enclosed as
+in non-communicating syringomyelia.
+From a mechanical perspective, the reason for
+syrinx formation and progression is unclear because
+(1) the fluid inside a non-communicating syrinx can
+be at a considerably higher pressure than the
+cerebrospinal fluid in the surrounding subarachnoid
+space;59–61 and (2) the cerebrospinal fluid has been
+shown to communicate into the syrinx cavity through
+the perivascular spaces.62–64 Thus, a major research
+question has been how and why fluid moves into and
+accumulates in the syrinx cavity. A passive mechanism
+for fluid movement into the syrinx alone is
+difficult to reconcile mechanically
+
+\section{Geometric}
+
+\subsection{Loth 2001}
+
+The spinal cavity of Visual Man of the Visible Human Project from the
+National Library of Medicine  was selected as the source for 
+the model geometry. Axial anatomic images (204831216) were
+used to identify the spinal cavity. Fifty images ~I.D. 1161–1651!
+were selected, which spanned the spinal length at a vertical spacing
+of 1 cm. The spinal canal of the Visual Man is a variable cross-sectional annular
+space with an overall length of 70 cm and an average outer diameter
+of 3 cm, resulting in an aspect ratio ~L:D! of approximately 
+24:1. The external boundary is 20 cm longer than the cord, and the
+end of the duct is closed. Hence, the lower part of the duct is a
+pipelike structure. The cord is connected along the duct to the
+external wall via nerve junctions and denticulate ligaments. The
+end of the spinal cord is also connected to the duct by a dense
+cluster of nerve roots, called the cauda equina \cite{parson}. The end of the canal where the spinal cord divides into a bundle of many smaller nerves was omitted (20 cm).
+
+The outer radius was fixed at 10 mm and the inner radius
+changed from 0.5 to 9.0 mm
+
+\begin{figure}[!h]
+\centering
+\caption{\label{anatomy} Flow waveform obtained through phase contrast MR on a healthy subject}
+    \includegraphics[scale=0.3]{loth_2001_hydraulic_diametre}
+\end{figure}
+
+\subsection{loth 2011}
+
+Obtaining an accurate representation of the cerebrospinal
+fluid system geometry is difficult with the
+pre-processing workflow required to perform computational
+fluid dynamics simulations. To perform these
+simulations, the geometry images need to be segmented
+and smoothed to form the numerical geometry
+which involves difficult interpretation of the fine and
+complex anatomical structures in the cerebrospinal
+fluid system contained within the images. At present,
+the precision of image-based geometry measurements
+are on the order of millimeters with varying levels of
+repeatability and accuracy. The dimensions of the
+subarachnoid space in a patient with type I Chiari
+malformation can be small near the herniation with
+complex morphology, which could translate into
+significant errors when simulating fluid flow. In
+particular, the pressure gradients required to move
+cerebrospinal fluid are highly sensitive to dimensions.
+For steady flow in straight circular pipe, the pressure
+gradient (dP/dz) required to cause flow (Q) is
+proportional to the inverse of the diameter (D) of
+the pipe to the fourth power along with fluid viscosity
+(m) and flow (dP/dz5128mQ/pD4). Gap dimensions
+for collagen meniscus implant (CMI) patients can be ;
+as small as one millimeter. Errors in these gap
+dimensions due to image resolution could easily be
+20–50%, which would lead to large errors in pressure
+gradient calculations. In addition, hydrodynamic
+simulations are typically limited to local regions of
+the cranial, cervical, thoracic, or lumbar subarachnoid
+space. This is a product of the limitations in
+magnet coil size and scanning time.
+
+An added complexity in evaluating craniospinal
+geometry is that tissue moves during the cardiac cycle.
+At present, it is unclear how influential tissue motion is
+on the hydrodynamic environment. This motion has
+been reported as small but detectible and may not be
+negligible given the importance of gap size. Brain
+displacements as measured by phase-contrast imaging
+have been described to be 0.1–0.2 mm with velocities
+in the range of 1–2 mm/s.13,77,78 In addition, spinal
+cord motion has been measured in healthy subjects
+and velocity values were even greater (12.4¡2.9
+mm/s79 and 7.0¡1.4 mm/s80). Alperin et al.29 reported
+maximum spinal cord displacement for control volunteers
+and patients with type I Chiari malformation to
+be 0.33 and 0.39 mm, respectively.
+
+\section{velocity}
+
+\subsection{loth 2011}
+
+While investigating intracranial compliance,
+Alperin et al.29 demonstrated that volume flow analysis
+may offer more insight to the altered biomechanical
+environment than velocity field analysis. Results
+in that study showed that peak volume flow rate
+measured at the C2 level was higher in volunteers
+(215 ml/min) than in CMI patients (190 ml/min).
+However, the net volume of fluid displaced during the
+cardiac cycle was similar between the two cases
+(0.57 ml healthy versus 0.56 ml patient). This implies
+that while increased resistance due to tonsillar
+herniation may affect velocity magnitudes throughout
+the cardiac cycle, flow rate may not be affected
+in the same way. Pressure gradients in the spinal
+canal (dP/dz) would then be forced to increase to
+maintain volume flow in the presence of increased
+resistance. Prolonged pressure elevation may then
+affect the elastic properties of the tissue in the
+craniospinal system and, thus, change the compliance
+of the system.
+
+\section{Flow modelling}
+
+\subsection{loth 2001}
+
+
+Annular spinal canal, pulsatile flow, spinal cavity (SAS) assumed rigid (the assumption that the flow waveform does not change along the spine ~i.e., rigid wall assumption), zero resistance expansion of the spinal cavity end.
+Simulations of the flow field within the spinal cavity were conducted
+using a one-dimensional model for a circular annulus to
+understand the basic gross features. A two-dimensional formulation
+was used to examine effects of eccentricity and noncircular
+cross sections.
+One-dimensional model : annular spinal canal with two cases, one moving and stationary cord.
+Entry data : CSF flow waveform obtained in vivo using dynamic phase contrast MRI.
+
+Two-Dimensional Model (Elliptic Spinal Cavity and Circular
+Spinal Cord). as eccentricity and noncircular boundaries
+
+In these idealized models, effects of nerve roots and wall compliance
+were not taken into account.
+
+\section{MRI}
+\subsection{loth 2001}
+Dynamic phase contrast magnetic resonance ~MR! was used to
+~
+measure the CSF pulsation in a healthy adult volunteer at the level
+of the second cervical vertebra. The MRI technique used to ac
+quire
+these images was previously reported by Alperin et al.
+The CSF flow waveform shown in Fig. 4 was computed by inte
+gration
+of the velocity values within the CSF flow area ~lumen!.
+
+The mean component of the flow waveform is nearly zero, depict
+ing
+an oscillatory motion inside the spinal cavity with a peak flo
+rate of 360 ml/min. The axial variation in velocity is expected to
+be significant along the spinal canal due to area changes. Based on
+the peak flow rate and the assumption that the flow waveform
+remains the same along the spine, the average velocity ~spatially
+~
+averaged across the cross section! would range from 1–8 cm/s
+with the maximum value located approximately 20 cm below the
+skull.
+
+\subsection{loth 2009}
+
+It is important to select the
+pixels near the center of the gap since a phase shift can occur for velocity
+traces at different distances from the wall. This is a well-documented
+phenomenon for pulsatile (Womersley) flows and would add noise to
+the calculation of VWS.
+
+\subsection{loth 2014}
+MRI data acquisition was performed as in article "The Impact of Spinal Cord
+ Nerve Roots and Denticulate Ligaments on Cerebrospinal Fluid Dynamics in
+ the Cervical Spine."
+
+
+\begin{figure}[!h]
+\centering
+\caption{\label{anatomy} Flow waveform obtained through phase contrast MR on a healthy subject}
+    \includegraphics[scale=0.3]{loth_2001_flow_waveform}
+\end{figure}
+
+\subsection{loth 2011}
+These
+tools include one-dimensional through-plane phase
+contrast magnetic resonance imaging for measurement
+of cerebrospinal fluid flow,10,24,25 high temporal
+resolution in-plane cerebrospinal fluid pulse wave
+velocity measurement,26 measurement of cerebellar
+tonsil movement,13,27 and quantification of an index
+of craniospinal compliance.28,2
+These modalities include techniques
+to measure cerebrospinal fluid velocity in 7D,30
+magnetic resonance diffusion tensor imaging to
+measure neural fiber tract direction and alignment31
+and brain cerebrospinal fluid content and diffusion
+properties32, magnetic resonance elastography to
+measure brain elasticity,33,34 and magnetic resonance
+spectroscopy to measure levels of different metabolites
+in the brain
+
+Of the dynamic magnetic resonance imaging techniques
+mentioned above, phase-contrast imaging has
+been the most widely explored, as it provides in vivo
+measurement of velocity that can be valuable to
+understanding the flow environment
+
+Cerebrospinal fluid velocity wave speed in the
+spinal subarachnoid space of three healthy subjects
+was calculated to be 4.6 m/s by Kalata et al.26 The
+study used a novel high-speed sagittal in-plane
+pcMRI measurement technique. As velocity wave
+speed is known to relate to the material properties of
+a flow conduit, it may provide an estimate of tissue
+stiffness in the craniospinal system when measured in
+the spinal subarachnoid space.
+
+Phase-contrast imaging-based velocity measurements
+may also have significant error and could be
+improved in many ways. Phase-contrast imagebased
+measurements are limited to velocity in a
+single direction (i.e. through-plane or in-plane
+velocity in a single direction) at approximately 30
+time points during the cardiac cycle. The main
+sources of error are from noise, breathing artifacts,
+and difficulty in selection of velocity encoding value
+since cerebrospinal fluid velocities may vary widely.
+Difficult regions for fluid velocity measurement are
+the spinal subarachnoid space and lateral ventricles
+where cerebrospinal fluid velocities are particularly
+low and the influence on fluid motion from breathing
+is maximal. Cerebrospinal fluid velocities are
+also difficult to measure in regions with complex
+flow patterns when significant portions of the
+velocity are not in the direction of velocity
+encoding, such as at the foramen magnum in type
+I Chiari malformation. In these measurements,
+integration of velocity to determine hydrodynamic
+parameters such as flow volume can also introduce
+error since the region of interest in the subarachnoid
+space cross-section needs to be interpreted. In
+the context of type I Chiari malformation, velocity
+can be the greatest in the narrow regions and thus
+the region of interest selection can have a critical
+impact. Techniques that may help improve fluid
+velocity measurement, and thereby calculation of
+hydrodynamic parameters from phase-contrast
+images, include reduction of signal noise from
+breathing, automatic optimization of velocity encoding
+values, better selection and optimization of
+the region of interest for flow measurement, greater
+temporal resolution, and velocity measurement in
+multiple directions within an entire volume of
+cerebrospinal fluid.
+
+\section{compliance}
+
+\subsection{loth 2011}
+
+It has been hypothesized that, under normal
+conditions, the healthy spinal subarachnoid space
+could act as a sort of notch filter (coupe bande) to dampen
+incoming cerebral blood flow pulsations to supply
+smooth blood flow to the neural tissue by Madsen
+et al.,81 Luciano and Dombrowski,82 and others
+
+Thus, any disruption to the system that alters
+compliance, such as an obstruction to cerebrospinal
+fluid flow, could reduce the damping effect on
+cerebral blood flow pulsations. A reduction in
+damping of the cerebral blood flow pulsations
+would result in abnormal biomechanical forces
+acting within the craniospinal, arterial, or venous
+system.
+
+Non-invasive
+methods of measuring compliance and tissue
+mechanical properties in the spinal subarachnoid
+space are being developed. These include magnetic
+resonance imaging techniques that allow calculation
+of overall compliance in the spinal subarachnoid
+space from cerebrospinal fluid velocity wave speed
+in the spinal subarachnoid space26 and magnetic
+resonance elastography to measure brain elasticity
+33,34 and local material properties.
+
+A major reason for the focus on non-invasive
+compliance measurement methods is that there are
+many complexities to physically obtaining and
+measuring material properties of tissues ex vivo that
+may affect compliance assessment of the craniospinal
+system. Some of these complexities include (1)
+differences in material testing techniques can produce
+varying results; (2) testing direction and orientation
+can have a large impact on measurements of
+anisotropic tissues
+
+and (3) removal and separation
+of each tissue component is not straight forward,
+easily repeatable, or always complete
+
+In addition,
+the time after harvesting, subject age, and preservation
+methods may influence tissue properties.
+
+While resistance can be increased by changes in
+geometry such as cerebellar tonsil herniation, the
+impact on cerebrospinal fluid hydrodynamics can
+follow two different scenarios. First, if the pressure
+gradient in the subarachnoid space increases greatly,
+the cerebrospinal fluid flow rate (i.e. the volume of
+fluid leaving the cranium) can be maintained.
+However, if the pressure gradient in the subarachnoid
+space remains unchanged, the flow rate would
+decrease correspondingly. Phase-contrast imaging
+measurements of velocity could be greater or smaller
+for an obstructed versus an unobstructed subarachnoid
+space due to the two possible scenarios as well
+as velocity jetting in the obstructed subarachnoid
+space.
+
+\section{pressure}
+
+\subsection{loth 2011}
+
+In vivo pressure measurements indicate that pressure
+magnitude and gradients have an impact in type I
+Chiari malformation in terms of symptoms and
+severity. While magnetic resonance imaging methods
+have provided information about velocity and
+geometry of the cerebrospinal fluid system, they are
+unable to measure pressure. Invasive measurements
+of pressure are possible but require creation of an
+access point to the subarachnoid space which alters
+the system and may not permit accurate measurements.
+Nevertheless, cerebrospinal fluid pressure has
+been quantified in a limited number of invasive
+studies to be 7–15 mmHg in the supine position and
+0–10 mmHg in the vertical position in healthy
+subjects.90,91
+
+Pressure in healthy subjects and patients
+with type I Chiari malformation has been measured
+in a number of ways including craniospinal pressure
+dissociation, which is obtained by measuring instantaneous
+pressure differences between ventricular and
+lumbar cerebrospinal fluid pressure, a technique
+introduced by Williams.56,92 Williams’ measurements
+indicated that pressure differences between the
+ventricles and spinal subarachnoid space are greater
+in patients with type I Chiari malformation than in
+healthy subjects. In another study by Sansur et al.,93
+it was found that cerebrospinal fluid pressure
+measured during coughing was elevated in patients
+with headache in comparison to patients without
+headache and healthy volunteers.
+
+Pressure gradients in the cerebrospinal fluid system
+are the driving forces that cause tissue and cerebrospinal
+fluid motion and may be the cause for
+nerve damage in type I Chiari malformation.14 Local
+cerebrospinal fluid pressure magnitude could also
+cause damage to the neural tissue by disrupting the
+normal flow of blood, interstitial, and/or lymphatic
+fluid within the tissues. Thus, a detailed understanding
+of the pressure within the cerebrospinal
+fluid, blood, interstitial, and lymphatic fluid would be
+helpful toward understanding the pathophysiology of
+type I Chiari malformation and related craniospinal
+disorders such as syringomyelia.
+
+Many structural and communicating factors influence
+cerebrospinal fluid system pressure dynamics.
+Structural factors include the structural layers and
+neural tissues, such as the vertebrae, skull, brain,
+spinal cord, dura, pia, and arachnoid membrane,
+that each have complicated anisotropic, nonlinear,
+and poroviscoelastic properties. The cerebrospinal
+fluid system communicates with the cardiovascular
+system through the veins and arteries supplying
+blood to the neural tissue.84,94 In particular, pressure
+in the venous system likely has a great impact on
+cerebrospinal fluid pressure since pressure in the
+venous vascular bed is normally only slightly lower
+(1–3 mmHg) than in the cerebrospinal fluid, with the
+veins only held from collapsing by their structural
+rigidity.95 Communication between the cerebrospinal
+fluid and intrathoracic pressure due to postural
+changes,96,97 coughing,93 valsalva and Queckenstedt’s
+test, and abdominal pressure98 has been well
+documented.56,61,92,93
+
+Cerebrospinal fluid pressure dynamics are difficult
+to simulate due to the complexities detailed above.
+Even if the pressure boundary conditions for computational
+simulations are measured invasively, the
+simulated results are suspect due to the necessity to
+simplify and decouple different parts of the cerebrospinal
+fluid and communicating systems. For
+example, decoupling of the spinal and cranial
+cerebrospinal fluid systems has been common in the
+existing studies and could make anomalies in the
+approximated flow field (e.g. seemingly random pressure
+or velocity fluctuations) difficult to justify in the
+context of only one part of the system.
+
+
+\section{Flow characteristics}
+\subsection{loth 2001}
+Based on these velocities and the hydraulic diameter, the
+instantaneous Reynolds number ~Re! at peak flow was found to
+vary between 150 and 450 with the maximum located at the base
+of the spine. Along the spine, the Womersley number
+was shown to vary between 5 and 18 with the
+largest values near the skull and base of the spine. The Womersley
+number was based on hydraulic radius, viscosity, and the cardiac
+cycle frequency ~50 beats per minute!.
+
+\section{Spinal cord}
+
+\subsection{loth 2001}
+The importance of cord movement was assessed by computing
+the CSF pulsation for a moving cord ~radius 6.5 mm! based on the
+
+MR measurement of cord motion. Spinal cord motion produced
+significant changes in the hydrodynamics for inner radii greater
+than 8.0 mm. For inner radii less than 8.0 mm, the pressure gra
+dient
+and shear stress waveforms remained unaltered, and varia
+tions
+in velocity profile were constrained to the region near the
+cord. The pressure gradient waveform also remained unaltered
+due to the inertial character of the flow
+
+\section{Results}
+
+\subsection{loth 2001}
+
+Peak velocity was largest near the middle of the spinal cord due to area changes
+with a maximum average value of 8 cm/s
+Based on these parameters
+inertial effects are expected to dominate the flow field for normal
+physiological flow rates and CSF fluid properties; especially in the
+cervical and lower lumbar regions where Womersley numbers
+were largest.
+Flow is expected to remain laminar throughout the
+cycle as the Reynolds number remains sub-critical
+Recritical
+,2100) throughout the cycle.
+Womersley numbers presented in this study may be slightly lower than average since the values were based on a subject’s
+CSF flow waveform with a heart rate of 50 beats per
+minute, which is lower than average.
+
+For very small annular gaps ~or large values of inner radius, the
+viscous effects dominate the flow and the pressure gradient wave
+forms begin to resemble the CSF input flow waveform shown in
+Fig. 4. For large annular gaps, i.e., high Womersley numbers,
+inertial effects dominate.
+
+Observed cross-sectional areas were largest in the cervical
+and lower lumbar regions of the spine, again indicating inertia
+dominated character of CSF flow in these regions.
+
+The results resemble classical Womersley
+flow profiles in circular pipes. For moderate to high Womer
+sleynumbers Figs. 8, 11, and 12!, the velocity profile is blunt
+compared to a parabolic shaped profile at low Womersley num
+bers ~Fig. 9!. The inertia dominated cases also generated hornlike
+structures near the wall boundaries during systole and diastole.
+
+The MR flow measurements taken at the base of the neck were
+assumed to be the same for the entire length of the spine. This
+assumption implies no compliance of spinal cavity boundaries.
+We expect compliance effects to be small in the neck and thoracic
+region and significant at lumbar region. Thus, our calculations of
+nondimensional parameters in the neck and thoracic regions
+should provide good estimates of the in vivo values but may overestimate
+those in the lumbar region. Further studies of the CSF
+flow waveform distribution along the spinal canal must be conducted
+to confirm this.
+
+
+\subsection{loth 2009}
+
+A number of studies have reported a single value of VWS during
+the CSF flow cycle. VWS in the CSF was found to be 13.5 m/s
+by Williams [2], 2.2–4 m/s by Carpenter et al. [3], 4 m/s by Greitz
+et al. [4], and 12.4 m/s by Bertram et al. [12]. In an in vitro study of
+syringomyelia by Martin et al., the VWS was found to vary during the
+CSF flow cycle from 2 to 26 m/s
+
+During diastole, the flow is reversed and the pressure in the CSF system
+of the spine is lower. Due to the nonlinear stiffening properties of the
+spinal tissues, the transient state of lower pressure results in a higher
+system compliance during diastole, which manifests itself in a lower
+wave speed through the system. However, the results during diastole in
+this study were not statistically significant, and thus, we cannot confir
+VWS variation during cardiac cycle. Statistically significant data were
+obtained only for the wave traveling caudally using the maximum
+velocity gradient (during systole) as a time point marker.
+
+The first measurement of wave
+speed was byWilliams in 1976 via direct puncture into the lumbar and
+cervical spinal canals.
+
+the lumbar and cisternal regions, which means that the assumption
+that the wave traveled from the lumbar to cervical region may not
+be correct [3]. Thus, the distance traveled was potentially shorter than
+assumed, whichwould mean that thewave speedwas likely smaller than
+reported, and in Carpenter et al.’s assessment, “.
+the true value lay in
+. .
+the range of 4 to 5 m/s” [3]. This value is in agreement with Carpenter
+et al.’s computed value from numerical simulations. In 2005, Bertram
+et al. also developed a numerical model of the spinal fluid system
+and computed wave speed to be approximately 12 m/s [12]. However,
+Carpenter et al. and Bertram et al. assumed elastic modulus values and
+dimensions for the various tissues, which will likely have a significan
+impact on the computed CSF VWS magnitude.
+Using an in vitro model representative of syringomyelia, Martin
+et al. demonstrated a variation in wave speed through the cardiac cycle
+(2–26 m/s) [5]. Because of the linear stiffening of the physical model’s
+spinal cord, this VWS variation during the CSF flow cycle could be
+different in vivo. This study computed the wave speed within a model
+of the spinal SAS in a two-part experiment. First, MR was used to
+measure velocity and compute the flow waveform in the model. In a
+separate experiment, unsteady pressure measurements were obtained
+in the same model in the laboratory. These values were then used to
+compute the wave speed employing a modified form of the Moens–
+Korteweg equation. In 1999, Greitz et al. reported the CSF VWS of
+approximately 4 m/s [4]. This value matches the values from the nu
+merical
+studies [3], [12]; however, details of how Greitz et al. obtained
+this value are not fully explained.
+Phase lag was recorded after the subject was
+asked to cough, thereby obtaining an approximatewave speed of 13 m/s.
+Carpenter et al. noted that the pressure pulse likely originated between
+
+the lumbar and cisternal regions, which means that the assumption
+that the wave traveled from the lumbar to cervical region may not
+be correct [3]. Thus, the distance traveled was potentially shorter than
+assumed, whichwould mean that thewave speedwas likely smaller than
+reported, and in Carpenter et al.’s assessment, “.
+the true value lay in
+. .
+the range of 4 to 5 m/s” [3]. This value is in agreement with Carpenter
+et al.’s computed value from numerical simulations. In 2005, Bertram
+et al. also developed a numerical model of the spinal fluid system
+and computed wave speed to be approximately 12 m/s [12]. However,
+Carpenter et al. and Bertram et al. assumed elastic modulus values and
+dimensions for the various tissues, which will likely have a significan
+impact on the computed CSF VWS magnitude.
+Using an in vitro model representative of syringomyelia, Martin
+et al. demonstrated a variation in wave speed through the cardiac cycle
+(2–26 m/s) [5]. Because of the linear stiffening of the physical model’s
+spinal cord, this VWS variation during the CSF flow cycle could be
+different in vivo. This study computed the wave speed within a model
+of the spinal SAS in a two-part experiment. First, MR was used to
+measure velocity and compute the flow waveform in the model. In a
+separate experiment, unsteady pressure measurements were obtained
+in the same model in the laboratory. These values were then used to
+compute the wave speed employing a modified form of the Moens–
+Korteweg equation. In 1999, Greitz et al. reported the CSF VWS of
+approximately 4 m/s [4]. This value matches the values from the nu
+merical
+studies [3], [12]; however, details of how Greitz et al. obtained
+this value are not fully explained.
+Phase lag was recorded after the subject was
+asked to cough, thereby obtaining an approximatewave speed of 13 m/s.
+Carpenter et al. noted that the pressure pulse likely originated between
+
+\begin{figure}[!h]
+\centering
+\caption{\label{anatomy} Velocity Wave Speed (VWS)}
+    \includegraphics[scale=0.1]{loth_2009_vws}
+\end{figure}
+
+\section{Discussion}
+
+\subsection{loth 2011}
+
+Currently, the state of type I Chiari malformation
+research is developing magnetic resonance imaging
+protocols for direct measurement of hydrodynamic
+parameters by imaging methods or indirect hydrodynamic
+parameter calculation through computational
+models. The goal of examining these
+parameters is to provide clinically useful information
+to improve care and treatment for patients with type I
+Chiari malformation. Some challenges to clinical
+translation of direct or indirect hydrodynamic parameters
+include:
+hydrodynamic parameters are not well-established.
+As with all biological data, each hydrodynamic
+parameter could vary significantly with age, sex,
+weight, and other factors. Thus, establishing indices
+for normal versus pathological hydrodynamic
+parameters is a difficult task. One possible workaround
+could be to develop parameters that are
+based on subject specific diagnostic tests rather
+than direct comparison to healthy subjects. These
+tests could be performed on a case by case basis to
+examine how the cerebrospinal fluid system
+responds to a particular stimulus. This type of test
+would be analogous to diagnostic techniques for
+assessment of stroke, coronary artery disease, and
+hypertension by vasodilation;75
+
+computational models require many assumptions.
+The assumptions will introduce error to the
+parameters calculated by the models. Some
+assumptions are close to reality, such as assuming
+cerebrospinal fluid behaves like water.76 However,
+other assumptions such as rigid, impermeable
+conduit boundaries and homogenous tissues could
+be an oversimplification. It is difficult to conclude
+when and which assumptions are valid, as these
+measurements are difficult to make in vivo;
+
+magnetic resonance imaging measurements have
+resolution limits. It is possible that the current
+imaging limitations are one of the confounding
+factors behind seemingly contradictory cerebrospinal
+fluid hydrodynamic studies. In addition, the
+accuracy of the simulations can only be as good as
+the boundary conditions used. Thus, it is important
+to perform boundary condition sensitivity analysis
+on the results of computational fluid dynamics
+simulations before making conclusions on the
+hydrodynamics;
+4. parameter interpretation is complex. While magnetic
+resonance imaging and simulations have
+provided many hydrodynamic parameters for
+assessment of type I Chiari malformation, better
+fundamental understanding of the cerebrospinal
+fluid system is needed to correctly interpret what
+influence these parameters have on the global
+dynamics. Additional complexities are also
+involved in correlation of parameters with clinical
+results such as symptom improvement, which is
+highly subjective, but also most necessary.
+
+Careful examination of hydrodynamics in type I
+Chiari malformation offers potential for better
+understanding of pathophysiology and clinical utility.
+Key parameters are geometry, velocity, compliance,
+resistance, and pressure. It is unclear which parameter
+is most important and it is likely that a
+combination of parameters is necessary to assess a
+pathological state. Studies of hydrodynamics in type I
+Chiari malformation are sparse as yet, with the
+exception of clinical phase-contrast imaging studies
+of cerebrospinal fluid velocity. Engineering-based
+models may help identify parameters that could be
+evaluated to assess clinical significance. This may
+assist current research efforts that are focused on
+developing magnetic resonance imaging protocols
+with an eye toward clinical applications.
+
+\section{dental and roots ligaments}
+The Impact of Spinal Cord
+ Nerve Roots and Denticulate Ligaments on Cerebrospinal Fluid Dynamics in
+ the Cervical Spine. This study showed that NRDL has an important impact on
+41 CSF dynamics in terms of velocity field and flow patterns.
+average thickness of nerve rootlets and den- 100
+ticulate ligaments were 1.4 and 0.1 mm, respectively
+
+its anatomy in litterature
+Alleyne, C. H., Jr., Cawley, C. M., Barrow, D. L., and Bonner, G. D., 1998,
+564 “Microsurgical Anatomy of the Dorsal Cervical Nerve Roots and the Cervical Dor-
+565 sal Root Ganglion/Ventral Root Complexes,
+Lang, J., 1993, Clinical Anatomy of the Cervical Spine, G. Thieme Verlag, Uni-
+566 versity of Wurzburg, Germany
+Tubbs, R. S., Salter, G., Grabb, P. A., and Oakes, W. J., 2001, “The Denticulate
+567 Ligament: Anatomy and Functional Significance,” J. Neurosurg., 94(2 Suppl),
+568 pp. 271–275.
+
+\section{blood spinal}
+\subsection{loth 2014}
+
+
+\section{notes}
+nous venonsde voir que la frequence de battement cardiaques a un effet sur la pression et le débit du LCS. Cet paramètre sera à prendre en compte lorsqui'il s'agira de comparer les résultats du modèle à ceux de la littérature.
+\bibliographystyle{unsrt}
+\bibliography{mybibfile}
+
+\end{document}
