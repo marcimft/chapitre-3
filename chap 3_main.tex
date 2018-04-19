@@ -1,0 +1,477 @@
+\documentclass[french]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{amsthm,amsmath,amssymb,mathrsfs,amsfonts,mathtools}
+\usepackage{hyperref}
+\usepackage{pgf, tikz}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{subfig}
+\graphicspath{{figures/}}
+\usepackage{array}
+\usepackage{makecell}
+
+%\renewcommand\theadalign{bc}
+%\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+\newcommand{\dd}{\mathrm{d}}
+%\modulolinenumbers[5]
+
+
+\begin{document}
+
+\section{Introduction}
+
+\section{Conditions aux limites}
+Aux entrées du réseau sanguin cérébral, c'est à dire aux entrées des cartotides et des vertébrales, nous avons imposé un signal de pression. Deux types de signaux ont été étudiés :
+\begin{itemize}
+\item Dans un premier temps, un signal de pression sinusoidal, d'une valeur moyenne de 100 mmHg, d'une amplitude de 20 mmHg.
+\item Dans un second temps, un signal de pression artérielle physiologique d'une pression systolique de 120 mmHg et d'une pression diastolique de 85 mmHg.
+\end{itemize}
+Pour chacun de ces signaux, nous avons fait varier la fréquence entre 30 et 240 bpm, qui correspond à une période entre 0.25 s et 2 s.
+En sortie du réseau, c'est à dire aux sortie des deux veines jugulaires, nous avons imposé une pression constante de 5 mmHg.
+
+\section{Modèle géométrique de couplage dynamique sang - LCS}
+
+\subsection{Aspects de la modélisation}
+
+Le modèle mathématique de circulation sanguine de Zagzoule et Marc Vergnes est un modèle construit à partir de la théorie de propagation des ondes dans un tube souple 1D appliqué à un réseau de vaisseaux sanguins allant des carotides et artères vertébrales au sinus et veines jugulaires. La schéma figure ... présente le réseau vasculaire cérébral proposé dans cette étude. Les donnes géométriques et rhéologiques figurent dans le tableau. Les aspects de modélisation, de simplification géométrique et du choix des paramètres mécaniques sont détaillés dans Zagzoule ref.
+
+Comme expliqué dans le chapitre ..., l'ensemble des composants du cerveau baigne dans le LCS. Il a été supposé que la pulsation sanguine cérébrale soit intégralement le facteur moteur de l'écoulement du LCS. Il y a d'autres facteurs/ hypthèses (production/ réabsorption du LCR, respiration abdominale) qui influent sur l'écoulement du LCS et qui ne seront pas prises en compte ici.
+
+Il a été expliqué dans le chapitre d'anatomie cranio spinal que l'ensemble des composants du cerveau baigne dans le LCS. Il a été également assumé que la pulsation sanguine cardiaque et sa propagation dans les réseau sanguin cérébrale est à l'origine de l'écoulement du LCS. {noter qu'il existe d'autres hypothèses à l'origine de l'écoulement du LCS}.
+Nous avons choisi de modéliser ce couplage dynamique sang - LCS à l'image de deux tubes coaxiaux. Le tube intérieur représenterait le sang, le tube extérieur réprésenterait le LCS.
+ 
+Dans les prochaines lignes, nous allons discuter des paramètres de modélisation impliqués dans cette modélisation. Une attention particulière sera porté sur le confinement de la géométrie et la compliance de l'espace SAS.
+
+\subsection{Confinement}
+
+Le paramètre de confinement défini dans cette étude est la rapport entre la section du vaisseau sanguin et celle de la section de l'espace SAS. Une valeur de confinement proche de zéro traduit un espace peu confiné, une résistance important dans l'écoulement du LCS. Tandis qu'une valeur de confinement proche de 1 traduit un fort couplage. {ce paramètre devra être expliqué en détail dans le partie théorique de propagation des ondes. Expliquer le couplage, les deux ondes dans le cas fort confinement => très couplé et faible confinement=>couplage inexistant}.
+Physiologiquement parlant, ce paramètre de confinement traduit la proximité relative d'un vaisseau sanguin à l'espace SAS. 
+La figure ... révèle en rouge les vaisseaux sanguins cérébraux et en bleu les espaces SAS. Les techniques d'IRM actuelles permettent de reconstruire une image 3D de l'anatomie des vaisseaux sanguins cérébraux et des espaces SAS. Ainsi, la localisation géographique permettra de différencier les vaisseaux sanguins géographiquement proches des espaces SAS et donc potentiellement à l'origine de la circulation du LCS. 
+
+\subsection{Elastance des espaces SAS spinaux et cérébraux}
+
+Recherche biblio sur l'élastance des espaces SAS.
+Montrer l'influence de l'élastance sur un cas simple de 2 tubes coaxiaux.
+Ce qui implique une forte ou faible élastance sur la propagation des ondes, leur amplitude, vitesse et ainsi quantifier le couplage dynamique
+
+\subsection{Compliance du sac dural lombtaire}
+
+Recherche biblio sur la compliance du sac dural.
+idem que section précdente. Inlfuence de la compliance du sac dural sur la propagation des ondes.
+
+\section{Résultats}
+
+Il sera présenté successivement les signaux obtenus pour les espaces sous arachnoidiens cérébraux et la région cervicale du LCS.
+
+\subsection{Signal de pression d'entrée sinusoïdal}
+
+Dans un premier temps, nous avons choisi une période de 0.85 s. La figure \ref{fig:pression_sang_1} présente le signal de pression d'entrée sinusoidal appliqué simultanément aux 2 carotides 1 et 2 ainsi qu'aux deux vertébrales 3 et 4. La figure \ref{fig:débit_sang_1} présente la résultante de débit dans une carotide.
+La figure \ref{fig:pression_sang_33} et \ref{fig:débit_sang_33} présentent respectivement le signal de pression constant de 5 mmHg et de débit résultant en sortie du réseau.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/Blood_pressure_time_evolution_input_tube_1}
+    \caption{Signal de pression sanguine imposé en entrée du réseau. Cas de la carotide 1.}
+    \label{fig:pression_sang_1}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/Blood_flow_time_evolution_input_tube_1}
+    \caption{Signal de débit sanguin résultant au niveau d'une carotide. Cas de la carotide 1.}
+    \label{fig:débit_sang_1}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/Blood_pressure_time_evolution_output_tube_33}
+    \caption{Signal de pression sanguine imposé en sortie du réseau. Cas de la jugulaire 33}
+    \label{fig:pression_sang_33}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/Blood_flow_time_evolution_output_tube_33}
+    \caption{Signal de débit sanguin résultant en sortie du réseau. Cas de la jugulaire 33}
+    \label{fig:débit_sang_33}
+  \end{minipage}
+\end{figure}
+
+Les figures \ref{fig:pression_lcs_33} et \ref{fig:débit_lcs_33} représentent respectivement les pressions et débit du LCS obtenus à l'entrée du tube spinal qu'on considéra comme étant la région cervicale.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/LCS_pressure_time_evolution_input_tube_33}
+    \caption{Signal de pression au niveau cervical du LCS}
+    \label{fig:pression_lcs_33}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/LCS_flow_time_evolution_input_tube_33}
+    \caption{Signal de débit au niveau cervicale du LCS}
+    \label{fig:débit_lcs_33}
+  \end{minipage}
+\end{figure}
+
+
+\begin{center}
+    \begin{tabular}{  c c  c }
+      \hline
+      \thead{} & \thead{P max \\ P min \\ P moyen \\ (mmHg)} & \thead{Q max \\ Q min \\Q moyen \\ (cm$^{3}$/s)} \\
+      \hline
+      Entrée Carotides 1 et 2 & \makecell{120 \\ 80 \\ 100} & \makecell{5.016 \\ 1.946 \\ 3.48} \\
+      \hline
+      Entrée Vertébrales 3 et 4 & \makecell{120 \\ 80 \\ 100} & \makecell{2.497 \\ 0.7403 \\ 1.618} \\     
+      \hline
+      Sortie veines jugulaires 33 et 34 & \makecell{Pression \\ constante} & \makecell{4.907 \\ 3.665 \\ 4.288} \\ 
+      \hline
+      LCS cervicale & \makecell{0.201 \\ -0.3329 \\ -0.0661} & \makecell{4.32 \\ -4.297 \\ 0.002348} \\
+      %Some text &  \makecell{Some really \\ longer text}  & Text text text  \\
+      \hline
+      
+    \end{tabular}
+\captionof{table}{Valeurs max, min et moyennes des pressions et des débits en entrée, en sortie du réseau sanguin et dans le région cervicale du LCS}
+\end{center}
+
+
+\subsubsection{Valeurs moyennes}
+
+La figure \ref{fig:pression_moyen_sinus_sang} présente la pression moyenne dans le réseau vasculaire cérébral suivant le numéro du vaisseau.
+La figure \ref{fig:pression_moyen_sinus_sas} présente la pression moyenne induite dans les espaces sous arachnoidiens cérébraux.
+"Il est à noter que le sens d'écoulement du sang dans le réseau vasculaire ne suit pas linéairement la numérotation des vaisseaux."
+Nous observons, comme prévu, une chute de pression moyenne entre le réseau artérielle et le réseau veineux. Celle-ci est la plus importante en amont et en aval de la microcirculation.  (explication : les vaisseaux les plus résistifs, majeur résistance périphérique ...).
+
+Nous observons une dépression moyenne induite globale dans l'ensemble des ESAC, à l'exception de l'ESAC de la microcirculation peu impacté.
+ 
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/mean_blood_pressure}
+    \caption{Pression moyenne du réseau vasculaire cérébral}
+    \label{fig:pression_moyen_sinus_sang}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/mean_csf_pressure}
+    \caption{Pression moyenne des ESAC}
+    \label{fig:pression_moyen_sinus_sas}
+  \end{minipage}
+  
+\end{figure}
+
+La figure \ref{fig:débit_moyen_sinus_sang} présente le débit moyen dans le réseau vasculaire cérébral.
+La figure \ref{fig:débit_moyen_sinus_sas} présente le débit moyen dans les ESAC.
+
+La figure \ref{fig:débit_moyen_sinus_sang_sas} présente ces débits normalisés par le max de la norme du débit moyen sur chacun des réseaux.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/mean_blood_flow}
+    \caption{Débit moyen du réseau vasculaire cérébral}
+    \label{fig:débit_moyen_sinus_sang}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/mean_csf_flow}
+    \caption{Débit moyen des ESAC}
+    \label{fig:débit_moyen_sinus_sas}
+  \end{minipage}
+  
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{signal_amplitude/mean_csf_blood_flow_norm}
+\caption{Débit du réseau sanguin cérébral et des ESAC normalisé par le débit moyen max}
+    \label{fig:débit_moyen_sinus_sang_sas}
+\end{figure}
+
+\subsubsection{Déphasage temporel}
+
+La figure \ref{fig:deph_pression_sang_sang_sinus} présente le déphasage temporel du pic de pression sanguine, en pourcentage du cycle cardiaque, en fonction du numéro du vaisseau par rapport au pic de pression du signal imposé en entrée. Par exemple, le vaisseau numéro 20 qui correspond aux collatérales présente un déphasage temporel de -5\% du cycle cardiaque. Son signal de pression est en retard de 0.0425 seconde sur le pic de pression de la carotide.
+La figure \ref{fig:deph_débit_sang_sang_sinus} présente de même le déphasage temporel du pic de débit.
+
+Au fur et à mesure que nous progressons dans le réseau sanguin, les signaux sont globalement de plus en plus en retard par rapport aux signaux d'entrée du réseau. Ce-ci correspond au temps de propagation de l'onde de pression sanguine. Néanmoins, il faut noter que l'onde de propagation dans le réseau vasculaire ne suit pas linéairement la numérotation des vaisseaux. Par exemple, celle-ci ne se cheminera pas linéairement depuis le vaisseau numéro 25 jusqu'au vaisseau numéro 31. Nous constatons ainsi un déphasage moins important des vaisseaux 30 et 32 . Ceux-là ayant un module d'élastance plus important.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/time_delay_pressure_blood}
+    \caption{Déphasage temporel du signal de pression}
+    \label{fig:deph_pression_sang_sang_sinus}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/time_delay_flow_blood}
+    \caption{Déphasage temporel du signal de débit}
+    \label{fig:deph_débit_sang_sang_sinus}
+  \end{minipage}
+  
+\end{figure}
+
+La figure \ref{fig:deph_pression_sang_lcs_sinus} et la figure \ref{fig:deph_débit_sang_lcs_sinus} présentent de même cette évolution dans les ESAC.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/time_delay_pressure_blood_lcs}
+    \caption{Déphasage temporel du signal de pression du réseau sas}
+    \label{fig:deph_pression_sang_lcs_sinus}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_amplitude/time_delay_flow_blood_lcs}
+    \caption{Déphasage temporel du signal de débit du reseau sas}
+    \label{fig:deph_débit_sang_lcs_sinus}
+  \end{minipage}
+  
+\end{figure}
+
+\subsubsection{Analyse fréquentielle}
+
+La figure \ref{fig:anal_freq_pression_sang_sinus}, \ref{fig:anal_freq_débit_sang_sinus}, \ref{fig:anal_freq_pression_lcr_sinus} et \ref{fig:anal_freq_débit_lcr_sinus} présentent respectivement les spectres de Fourier de pression et de débit en entrée du réseau sanguin et au niveau cervicale du réseau du LCS.
+
+
+\begin{figure}
+    \centering
+    \subfloat[Spectre de Fourier du signal de pression d'entrée sanguine]{\includegraphics[width=0.4\linewidth]{signal_amplitude/Harmonics_Blood_pressure_time_evolution_input_tube_1}}
+  \qquad
+	\subfloat[Spectre de Fourier du signal de pression du LCS cervicale]{\includegraphics[width=0.4\linewidth]{signal_amplitude/Harmonics_LCS_pressure_time_evolution_input_tube_33}}
+	\caption{Spectre de Fourier de pression}
+  \label{fig:anal_freq_pression_sang_sinus}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \subfloat[Spectre de Fourier du signal de débit d'entrée sanguin]{\includegraphics[width=0.4\linewidth]{signal_amplitude/Harmonics_Blood_flow_time_evolution_input_tube_1}}
+  \qquad
+	\subfloat[Spectre de Fourier du signal de débit du LCS cervicale]{\includegraphics[width=0.4\linewidth]{signal_amplitude/Harmonics_LCS_flow_time_evolution_input_tube_33}}
+	\caption{Spectre de Fourier de pression}
+  \label{fig:anal_freq_débit_sang_sinus}
+\end{figure}
+
+
+\subsection{Signal de pression d'entrée physiologique}
+
+Les signaux sont obtenus pour 5 cycles cardiaques de 0.85 s. La figure \ref{fig:pression_sang_1_art} présente le signal de pression d'entrée artériel appliqué simultanément aux 2 carotides 1 et 2 ainsi qu'aux deux vertébrales 3 et 4. La figure \ref{fig:débit_sang_1_art} présente la variation de débit temporel dans la carotide.
+La figure \ref{fig:pression_sang_33_art} et \ref{fig:débit_sang_33_art} présentent respectivement le signal de pression constant et de débit appliqué en sortie du réseau.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/Blood_pressure_time_evolution_input_tube_1}
+    \caption{Signal de pression sanguin temporel en entrée du réseau}
+    \label{fig:pression_sang_1_art}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/Blood_flow_time_evolution_input_tube_1}
+    \caption{Signal de débit sanguin temporel en entrée du réseau}
+    \label{fig:débit_sang_1_art}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/Blood_pressure_time_evolution_output_tube_33}
+    \caption{Signal de pression sanguin temporel en sortie du réseau}
+    \label{fig:pression_sang_33_art}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/Blood_flow_time_evolution_output_tube_33}
+    \caption{Signal de débit sanguin temporel en sortie du réseau}
+    \label{fig:débit_sang_33_art}
+  \end{minipage}
+\end{figure}
+
+Les figures \ref{fig:pression_lcs_33_art} et \ref{fig:débit_lcs_33_art} représentent respectivement les pressions et débit du LCS cervicale obtenus.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/LCS_pressure_time_evolution_input_tube_33}
+    \caption{Signal de pression temporel cervicale du LCS en sortie du réseau}
+    \label{fig:pression_lcs_33_art}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/LCS_flow_time_evolution_input_tube_33}
+    \caption{Signal de débit temporel cervicale du LCS en sortie du réseau}
+    \label{fig:débit_lcs_33_art}
+  \end{minipage}
+\end{figure}
+
+
+\begin{center}
+    \begin{tabular}{  c c  c }
+      \hline
+      \thead{} & \thead{P max \\ P min \\ P moyen \\ (mmHg)} & \thead{Q max \\ Q min \\Q moyen \\ (cm$^{3}$/s)} \\
+      \hline
+      Entrée Carotides 1 et 2 & \makecell{121.5 \\ 85 \\ 105.5} & \makecell{5.864 \\ 2.249 \\ 3.687} \\
+      \hline
+      Entrée Vertébrales 3 et 4 & \makecell{121.5 \\ 85 \\ 105.5} & \makecell{3.041 \\ 0.9163 \\ 1.715} \\     
+      \hline
+      Sortie veines jugulaires 33 et 34 & \makecell{Pression \\ constante} & \makecell{7.52 \\ 2.185 \\ 4.544} \\ 
+      \hline
+      LCS cervicale & \makecell{0.9225 \\ -0.6138 \\ -0.0621} & \makecell{4.039 \\ -2.365 \\ 0.002657} \\
+      %Some text &  \makecell{Some really \\ longer text}  & Text text text  \\
+      \hline
+      \end{tabular}
+      \captionof{table}{Valeurs max, min et moyennes des pressions et des débits en entrée, en sortie du réseau sanguin et dans le région cervicale du LCS}
+\end{center}
+    
+\subsubsection{Valeurs moyennes}
+
+La figure \ref{fig:pression_moyen_sang_art} présente la pression moyenne du réseau vasculaire cérébral.
+La figure \ref{fig:pression_moyen_sas_art} présente la pression moyenne des espaces sous arachnoidiens cérébraux. Il s'agit des tubes coaxiaux aux vaisseaux sanguins contenant le LCS (segment 5 à 32).
+
+La figure \ref{fig:pression_moyen_sang_sas_art} présente ces pressions normalisés par la pression moyenne max sur chacun des réseaux.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/mean_blood_pressure}
+    \caption{Pression moyenne du réseau vasculaire cérébral}
+    \label{fig:pression_moyen_sang_art}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/mean_csf_pressure}
+    \caption{Pression moyenne des ESAC}
+    \label{fig:pression_moyen_sas_art}
+  \end{minipage}
+  
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{signal_cardiaque/mean_csf_blood_pressure_norm}
+\caption{Pression moyenne du réseau sanguin cérébral et des ESAC normalisé par la pression moyenne max}
+    \label{fig:pression_moyen_sang_sas_art}
+\end{figure}
+
+La figure \ref{fig:débit_moyen_sang_art} présente la debit moyen du réseau vasculaire cérébral.
+La figure \ref{fig:débit_moyen_sas_art} présente la debit moyen des espaces sous arachnoidiens cérébraux. Il s'agit des tubes coaxiaux aux vaisseaux sanguins contenant le LCS (segment 5 à 32).
+
+La figure \ref{fig:débit_moyen_sang_sas_art} présente ces débits normalisés par le débit moyen max sur chacun des réseaux.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/mean_blood_flow}
+    \caption{Débit moyen du réseau vasculaire cérébral}
+    \label{fig:débit_moyen_sang_art}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/mean_csf_flow}
+    \caption{Débit moyen des ESAC}
+    \label{fig:débit_moyen_sas_art}
+  \end{minipage}
+  
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{signal_cardiaque/mean_csf_blood_flow_norm}
+\caption{Débit moyen du réseau sanguin cérébral et des ESAC normalisé par le débit moyen max}
+    \label{fig:débit_moyen_sang_sas_art}
+\end{figure}
+
+\subsubsection{Déphasage temporel}
+
+La figure \ref{fig:deph_pression_sang_sang_art} présente le déphasage temporel du pic de pression, en pourcentage du cycle cardiaque, des signaux de pression du réseau sanguin par rapport au pic de pression du signal imposé en entrée.
+La figure \ref{fig:deph_débit_sang_sang_art} présente le déphasage temporel du pic de débit, en pourcentage du cycle cardiaque, des signaux de débit du réseau sanguin vis à vis du pic de débit du signal imposé en entrée.
+
+Une valeur négative indique un signal en retard. Une valeur positive indique un signal en avance.
+
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/time_delay_pressure_blood}
+    \caption{Déphasage temporel du signal de pression}
+    \label{fig:deph_pression_sang_sang_art}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/time_delay_flow_blood}
+    \caption{Déphasage temporel du signal de débit}
+    \label{fig:deph_débit_sang_sang_art}
+  \end{minipage}
+  
+\end{figure}
+
+La figure \ref{fig:deph_pression_sang_lcs_art} présente le déphasage temporel du pic de pression, en pourcentage du cycle cardiaque, des signaux de pression du réseau sas cérébral par rapport au pic de pression du signal sanguin imposé en entrée.
+La figure \ref{fig:deph_débit_sang_lcs_art} présente le déphasage temporel du pic de débit, en pourcentage du cycle cardiaque, des signaux de débit du réseau sas cérébral par rapport au pic de débit du signal sanguin imposé en entrée.
+
+Une valeur négative indique un signal en retard. Une valeur positive indique un signal en avance.
+
+\begin{figure}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/time_delay_pressure_blood_lcs}
+    \caption{Déphasage temporel du signal de pression du réseau sas}
+    \label{fig:deph_pression_sang_lcs_art}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{signal_cardiaque/time_delay_flow_blood_lcs}
+    \caption{Déphasage temporel du signal de débit du reseau sas}
+    \label{fig:deph_débit_sang_lcs_art}
+  \end{minipage}
+  
+\end{figure}
+
+\subsubsection{Analyse fréquentielle}
+
+La figure \ref{fig:anal_freq_pression_sang_art} présente le signal de pression sanguin d'entrée ainsi que son spectre de Fourier.
+La figure \ref{fig:anal_freq_débit_sang_art} présente le signal de débit sanguin d'entrée ainsi que son spectre de Fourier.
+La figure \ref{fig:anal_freq_pression_lcr_art} présente le signal de pression du LCS cervicale ainsi que son spectre de Fourier.
+La figure \ref{fig:anal_freq_débit_lcr_art} présente le signal de débit cervicale du LCS ainsi que son spectre de Fourier.
+
+
+\begin{figure}
+    \centering
+    \subfloat[Spectre de Fourier du signal de pression d'entrée sanguine]{\includegraphics[width=0.4\linewidth]{signal_cardiaque/Harmonics_Blood_pressure_time_evolution_input_tube_1}}
+  \qquad
+	\subfloat[Spectre de Fourier du signal de pression du LCS cervicale]{\includegraphics[width=0.4\linewidth]{signal_cardiaque/Harmonics_LCS_pressure_time_evolution_input_tube_33}}
+	\caption{Spectre de Fourier de pression}
+  \label{fig:anal_freq_pression_sang_art}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \subfloat[Spectre de Fourier du signal de débit d'entrée sanguin]{\includegraphics[width=0.4\linewidth]{signal_cardiaque/Harmonics_Blood_flow_time_evolution_input_tube_1}}
+  \qquad
+	\subfloat[Spectre de Fourier du signal de débit du LCS cervicale]{\includegraphics[width=0.4\linewidth]{signal_cardiaque/Harmonics_LCS_flow_time_evolution_input_tube_33}}
+	\caption{Spectre de Fourier de pression}
+  \label{fig:anal_freq_débit_sang_art}
+\end{figure}
+\bibliographystyle{unsrt}
+\bibliography{mybibfile}
+
+\end{document}
